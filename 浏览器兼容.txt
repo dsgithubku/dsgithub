@@ -1,0 +1,163 @@
+第一部分:　web前段项目开发软件(工具)选取与安装
+
+一、软件选取
+	1.node.js
+	(1.什么是node.js
+		Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 
+		Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效
+	(2)node.js的功用
+		前后端编程语言环境的统一
+		node带来的高性能
+		并行使使用者更高效的利用分布式的环境
+		提升web渲染力
+		游戏开发
+		工具类应用
+		1.Node.js最适合在流媒体应用程序中使用，还有一些聊天应用程序。
+		2.游戏服务器 - 需要一次处理数千个请求的快速和高性能服务器，这是一个理想的框架。
+		3.广告服务器 - 再次在这里你可以有数千个请求从中央服务器提取广告，Node.js可以是一个理想的框架来处理这个问题。
+		4.流服务器 - 使用Node的另一个理想方案是用于多媒体流服务器，其中客户端有请求从该服务器提取不同的多媒体内容
+	2.git
+	(1)什么是git
+		Git是一个免费的开源 分布式版本控制系统，旨在快速高效地处理从小型到大型项目的所有事务。
+		Git 易于学习， 占地面积小，具有闪电般快速的性能。它超越了Subversion，CVS，Perforce和ClearCase等SCM工具，具有廉价本地分支，便捷的临时区域和 多个工作流程等功能。
+	(2)git的功用
+		文件版本管理。
+		作为版本管理系统诞生的Git，最重要的是可以帮助团队进行文件管理，各种源代码和文档等。
+
+		代码评审。
+		代码评审作为软件开发流程中重要的一环，是项目顺利进行提供有效的保障，使用过Github的人对Pull Request应该不会陌生，如果高效进行代码就是另一个问题了。
+
+		持续集成。
+		持续集成作为软件的开发和发布流程中最重要的一环，通过进行单元测试、自动化测试和自动构建发布，可以非常容易发现和改正Bug, 通过钩子(Hook)，Git可以和构建工具（如Jenkins）结合构建持续集成环境
+3.bower
+(1)什么是bower
+Bower是一种包管理器可以管理包含HTML，CSS，JavaScript，字体甚至图像文件的组件。Bower不会连接或缩小代码或执行任何其他操作 它只是安装所需的软件包及其依赖项的正确版本。
+它依赖于node.js和npm,所以使用它需要先安装node.js
+(2)bower的功用
+查看已安装的库列表
+更新某个库
+卸载某个库
+查看本地缓存的库
+查看某个库的主页
+提交自己的类库到官方
+4.yeoman
+(1)什么是yeoman
+	Yeoman帮助我们创建项目，提供更好的工具来使我们的项目更多样化。
+
+　　Yeoman提供generator系统，一个generator是一个插件，在我们在一个完整的项目上使用‘yo’命令时，会运行该generator。通过这些官方的Generators，推出了Yeoman工作流，工作流是一个健壮、有自己特色的客户端堆栈，包含能快速构建漂亮的网络应用的工具和框架。Yeoman提供了负责开始项目开发的一切，没有任何让人头痛的手动配置。
+
+　　采用模块化结构，Yeoman利用从几个开源社区网站学习到的成功和教训，以确保栈开发人员越来越智能的进行开发。基于良好的文档基础以及深思熟虑的项目构建过程，Yeoman提供测试和其他更多技术 ，因此开发人员可以更专注于解决方案而不用去担心其他小事。
+
+　　Yeoman主要提供了三个工具：脚手架（yo），构建工具（grunt），包管理器（bower）。这三个工具是分别独立开发的，但是需要配合使用，来实现我们更高效的工作流模式。
+(2)yeoman和yo的功用
+YO：Yeoman核心工具，项目工程依赖目录和文件生成工具，项目生产环境和编译环境生成工具
+5.HTML5Boilerplate
+(1)什么是HTML5Boilerplate
+HTML5 Boilerplate 帮你构建 快速, 健壮, 并且 适应力强 的web app或网站的模板
+(2)HTML5Boilerplate的功用
+HTML5 Boilerplate 帮你构建 快速, 健壮, 并且 适应力强 的web app或网站。
+6.gulp
+(1)什么是gulp
+Gulp 是一个自动化工具，前端开发者可以使用它来处理常见任务：
+搭建web服务器
+文件保存时自动重载浏览器
+使用预处理器如Sass、LESS
+优化资源，比如压缩CSS、JavaScript、压缩图片
+(2)gulp的功用
+Gulp执行预处理
+监听Sass文件
+使用Browser Sync自动刷新
+优化CSS和JavaScript文件
+优化图片
+清理生成文件
+使用 Autoprefixer ，你不再需要写CSS浏览器内核前缀
+增加 Sourcemaps ，让你更方便的调试Sass,coffeescript
+使用 sprity 创建精灵图
+gulp-changed 只允许通过修改的文件
+Babel 或 Traceur 写ES6
+Browserify , webpack , jspm 模块化JavaScript
+Handlebars , Swing 模块化Html
+require-dir 分割gulpfile成多个文件
+gulp-moderinizr 自动生成Modernizr脚本
+
+
+二、工具下载并安装
+１．node.js
+	(1)下载测试安装成功
+	node -v
+	(2)检测npm
+	npm -v
+	(3)更新到最新版本
+	npm install -g npm@lastest
+	(4)npm update 更新
+	npm uninstall
+2.git
+	(1)下载测试安装成功
+	git --version
+3.bower
+	(1)下载并安装
+	npminstall -g bower
+	npm install -g bower --save-dev
+	(2)测试安装成功
+	bower -v
+4.gulp
+	(1)下载并安装
+		npm install -g gulp
+		npm install --save-dev gulp
+	(2)测试安装成功	
+	gulp -v
+	CLI:Command Line Interface (cli 命令行接口)
+	(3)pump
+	npm install pump
+5.yeoman
+	(1)下载并安装
+	npm install -g yo
+	yo 脚手架
+	Grunt/gulp 构建工具
+	Bower/npm 包管理工具
+	(2)测试安装成功
+	node -v
+	npm --version 
+	git -version
+	npm install -g gulp
+	npm install -g bower
+	npm install -g yo gulp-cli bower    
+	 node --version   
+	 yo --version
+	 (3)安装yeoman生成器
+	 npm install -g generator-fountain-webapp
+
+	 运行生成器
+	 yo fountain-webapp
+
+
+三、利用yo 创建web 开发项目流程
+1.准备开发环境
+node.js
+git
+gulp
+bower
+yo
+
+2.利用yeoman生成器创建项目
+ 1.安装generator-fountain-webapp生成器
+ >nom install -g generator-fountain-webapp
+ 2.使用yo 创建项目　
+ >yo fountain-webapp
+ (1)选择yes
+ (2)选择javascript框架
+ 	-vue.js2
+ (3)选择css预处理
+ - CSS|SASS|LESS....
+ (4)选择CI(持续集成)平台
+ --jenkins
+(5)选择app样例
+-- todoMVC
+
+
+3.启动项目
+> npm run serve
+ 1.打开本地项目服务器
+http://localhost:3000
+ 2.打开UI测试服务器
+http://localhost:3001

@@ -1,0 +1,79 @@
+题目：　git使用
+
+一、git配置
+	1.指定用户名
+	>git config --global user.name "名称"
+	2.指定E-MAIL
+	>git config --global user.email "邮箱"
+二、创建仓库
+	1.建立文件夹
+	>mkdir gitwork
+	2.进入文件夹(gitwork)
+	>cd gitwork
+	3.创建仓库
+	>git init
+
+	//注:>ls -ah    显示隐藏文件
+三、建立文件
+	在工作目录中,建立readme.txt
+	>vim readme.txt
+
+	//注:按ESC切换命令模式，输入:wq
+
+四、将文件存入暂存区(stage)中
+	>git add readme.txt
+	>git add.
+五、查看当前文件信息
+	1.查看状态
+	>git status
+    2.查看历史
+    >git log
+    3.查看不同
+    >git diff
+六、提交文件到仓库
+	暂存区文件=>仓库
+	>git commit 文件名  -m "说明文字"
+七、将暂存区文件恢复
+	>git checkout  文件名
+	>git checkout HEAD 文件名
+	>git checkout HEAD^ 文件名
+	>git checkout HEAD~3 文件名
+八、从仓库恢复文件
+	>git reset 文件名(版本号)  //只能从仓库恢复到暂存区,不改变工作区中的内容,套想改变还要使用git checkout
+	>git checkout 文件名
+
+
+	git reset  系统提供了三个参数
+		(1) --soft 
+		>git reset --soft 版本号  //只改变仓库中的内容,暂存区和工作区不受影响
+		(2).--mixed 
+		>git reset --mixed 版本号  //改变仓库而和暂存区的内容，工作区不受影响
+		不写参数默认指的是　--mixed
+		(3) --hard
+		>git hard --hard 版本号　//改变仓库、暂存区和工作区中的内容
+九、浏览操作过程
+	git reflog 回看操作过程
+十、注册github账号
+	https://github.com/	
+十一、生成公钥并完成github网站的认证
+	 (1)生成密钥
+	 >ssh-keygen
+	 (2)获取公钥
+	 >rsa_id.pub
+	  打开文件　复制所有内容
+	 (3)登陆github账号
+	 (4)打开setting(设置),找到SSH,进行添加(创建)
+十二、添加远程仓库
+	>git remote add origin https://github.com/dsgithubku/dsgithub
+	或
+	>git remote add origin git@github.com:dsgithubku/dsgithub
+
+十三、查看远程仓库
+	>git remote
+	>git remote show 仓库
+	>git remote -v 
+
+十四、推送文件到远程仓库
+	首先使用git pull origin master 完成下载
+	>git push origin master  //推送成功
+	其次　.>git push origin master -f //强行推送

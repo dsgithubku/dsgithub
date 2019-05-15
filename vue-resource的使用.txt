@@ -1,0 +1,30 @@
+题目：插件vue-resource
+一、搭建环境
+	1.node.js
+	2.vue-cli
+二、创建项目
+	1.vue init webpack-simple v-resource
+	2.cd v-resource
+	3.nom instal
+	4.vue-resource
+	>npm install --save-dev vue-resource	
+	5.npm run dev
+三、引入插件 vue-resource插件(main.js)
+	1.import VueResource from "vue-resource"
+
+	2.Vue.use(VueResource)
+
+四、编写组件
+
+	1.获取数据方法
+	var url="https://jsonplaceholder.typicode.com/posts";
+	this.$http.get(url).then((res)=>{
+	 console.log(res);
+	},(err)=>{
+	 console.log(err);
+	})
+	2.发送到数据服务器
+	var url="https://jsonplaceholder.typicode.com/posts";
+	this.$http.post(url,{userId:4,title:"myTitle",body:"MYbody"}).then((res)=>{
+	console.log(res);
+	})

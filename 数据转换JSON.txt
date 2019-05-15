@@ -1,0 +1,7 @@
+JSON 转换成字符串： JSON.stringify(对象)
+		解析 JSON.parse(string)
+
+H5数据库存储技术
+		localStorage.setitem(名称,内容)
+		获取
+		localStorage.getitem(名称)

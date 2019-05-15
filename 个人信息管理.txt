@@ -1,0 +1,106 @@
+题目：个人信息管理
+一、环境搭建
+１．安装软件
+	（１）vue-cli
+	>npm install vue-cli -g
+	(2)webpack
+	>npm install webpack
+2.创建项目
+	(1)grid
+	>vue init webpack-simple grid
+3.进入项目文件夹grid
+	>cd grid
+4. 安装依赖
+	>npm install
+5.运行项目
+	>npm run dev	
+	(>npm run build)
+二、组件开发
+在项目中的src文件夹下建立组件文件夹components
+1.根组件
+可以不放在components下,默认是App.vue
+	<template></template>
+	<script></script>
+	<style></style>
+2.子组件
+名称：BaseTable.vue
+	<template></template>
+	<script></script>
+	<style></style>
+3.测试数据描述
+	person:[
+		{name:"peter",age:20,sex:"Male"},
+		{name:"Nancy",age:30,sex:"Female"}
+	]
+三、功能实现
+1.添加功能	
+	1)绑定@click事件到按钮上
+	2)定义方法addData()
+	获取表单元素中的数据(双向数据绑定)
+	添加到people数组中,使用的方法是push({})
+	3)把原来表单的已填写的信息清空
+	this.vname=""
+2.删除功能
+	1)在子组件，绑定click事件绑定到删除按钮上
+	2)在子组件中定义del()方法
+	this.$emit("del",name)
+	3)在父组件中监听del事件,并接受数据($event)
+	<base-table @del="removeData($event)">
+	4)在父组件中定义删除事件方法removeData(name)
+3.排序功能
+	1)在子组件中绑定click事件到表格的标题栏上
+	<th @click="sort(col.name)" 
+	2)在子组件中定义sort方法
+	this.$emit("sort",{})
+	3)在父组件中对sort自定义的事件进行监听,并接受传来的数据
+	<base-table  @sort="sortBy($event)">
+	4)在父组件中定义sortBy方法
+４．搜索功能
+	1)获取搜索关键字
+	e.target.value
+	或者双向数据绑定
+	v-model="vl"
+	value=this.vl
+	2)进行数组遍历
+	this.people.forEach(function(item,index){
+
+	})
+	3)搜索框清空
+
+
+附件：
+	1.Array.forEach(function(item,index){
+
+	})
+	2.Array.find(function(item,index){
+
+	})
+	3.Array.findIndex(function(item){
+
+	})
+	4.Array.filter(function(item,index){
+
+	})
+	5.Array.map(function(item,index){
+
+	})
+	6.String.indexOf(value);
+	7.Array.sort(function(a,b){
+		return a-b;
+	})
+	Array.sort(function(item1,item2){
+		return item1.localecompare(item2); 
+	})
+	8.Array.every(function(item,index){
+
+	})
+	9.Array.some(function(item,index){
+	
+	})
+
+
+
+
+
+
+
